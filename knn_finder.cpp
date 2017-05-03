@@ -85,9 +85,9 @@ int main(int argc, char **argv) {
 
 	std::cout << std::endl << "Searching k-nearest neighbours..." << std::endl;
 	if (vm.count("sparse")) {
-		find_knn(mat, mat_width, mat_height, k, dist, idx);
-	} else {
 		find_knn_sparse(mat, mat_width, mat_height, k, dist, idx);
+	} else {
+		find_knn(mat, mat_width, mat_height, k, dist, idx);
 	}
 
 	std::cout << std::endl << "Writing search result (distance) to " << dist_filename << std::endl;
